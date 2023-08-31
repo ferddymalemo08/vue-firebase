@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room List - Timetabling System</title>
+    <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.js"></script>
+    <style>
+        /* Your CSS styles here */
+    </style>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>Room List</h1>
+        </header>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#schedule">View Schedule</a>
+            <a href="#courses">Manage Courses</a>
+            <a href="#rooms">Manage Rooms</a>
+        </nav>
+        <main>
+            <h2>List of Rooms</h2>
+            <ul>
+                <li v-for="room in rooms" :key="room.id">
+                    <h3>Room {{ room.number }}</h3>
+                    <p>Capacity: {{ room.capacity }}</p>
+                    <p>Availability: {{ room.availability }}</p>
+                </li>
+            </ul>
+        </main>
+    </div>
+
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    rooms: [
+                        { id: 1, number: '101', capacity: 50, availability: 'Available' },
+                        // Add more room data here
+                    ]
+                };
+            }
+        });
+
+        app.mount('#app');
+    </script>
+</body>
+</html>
