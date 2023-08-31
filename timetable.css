@@ -1,0 +1,93 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Global styles */
+  body {
+    font-family: Arial, sans-serif;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  /* Header styles */
+  .header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  /* Navigation styles */
+  .nav {
+    display: flex;
+    justify-content: center;
+    background-color: #eee;
+    padding: 10px;
+  }
+
+  .nav a {
+    color: #333;
+    text-decoration: none;
+    padding: 10px 20px;
+  }
+
+  /* Course list styles */
+  .course-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+  .course-card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: white;
+  }
+
+  /* Instructor list styles */
+  .instructor-list {
+    list-style: none;
+  }
+
+  .instructor-item {
+    margin-bottom: 10px;
+  }
+
+  /* Room list styles */
+  .room-list {
+    list-style: none;
+  }
+
+  .room-item {
+    margin-bottom: 10px;
+  }
+
+  /* Timetable styles */
+  .timetable {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: white;
+  }
+
+  .timetable-item {
+    border: 1px solid #ddd;
+    padding: 5px;
+    text-align: center;
+  }
+
+  /* Footer styles */
+  .footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+  }
