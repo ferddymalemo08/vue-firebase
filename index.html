@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timetabling System</title>
+    <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.js"></script>
+    <style>
+      /* CSS styles here */
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <h1>{{ pageTitle }}</h1>
+        <p>{{ systemDescription }}</p>
+      </header>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#schedule">View Schedule</a>
+        <a href="#courses">Manage Courses</a>
+        <a href="#rooms">Manage Rooms</a>
+      </nav>
+      <main>
+        <h2>About the System</h2>
+        <p>{{ aboutText }}</p>
+        <h2>Getting Started</h2>
+        <p>{{ gettingStartedText }}</p>
+        <h2>Contact Us</h2>
+        <p>
+          If you have any questions or need assistance, please don't hesitate to
+          contact our support team at
+          <a href="mailto:info@timetablingsystem.com"
+            >info@timetablingsystem.com</a
+          >.
+        </p>
+      </main>
+    </div>
+
+    <script>
+      const app = Vue.createApp({
+        data() {
+          return {
+            pageTitle: "Welcome to the Timetabling System",
+            systemDescription: "Manage your schedules efficiently!",
+            aboutText:
+              "This timetabling system allows you to create and manage schedules for various courses and rooms. It helps streamline the process of scheduling classes, meetings, and other events.",
+            gettingStartedText:
+              "To begin, you can navigate through the links above to manage courses, rooms, and view schedules. Make sure to input accurate information to ensure an organized timetable.",
+          };
+        },
+      });
+
+      app.mount("#app");
+    </script>
+  </body>
+</html>
