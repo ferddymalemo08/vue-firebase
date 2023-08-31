@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timetable - Timetabling System</title>
+    <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.js"></script>
+    <link href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>Timetable</h1>
+        </header>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#schedule">View Schedule</a>
+            <a href="#courses">Manage Courses</a>
+            <a href="#rooms">Manage Rooms</a>
+        </nav>
+        <main>
+            <h2>Weekly Timetable</h2>
+            <table>
+                <tr>
+                    <th>Time</th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                </tr>
+                <tr v-for="timeSlot in timetable" :key="timeSlot.time">
+                    <td>{{ timeSlot.time }}</td>
+                    <td>{{ timeSlot.monday }}</td>
+                    <td>{{ timeSlot.tuesday }}</td>
+                    <td>{{ timeSlot.wednesday }}</td>
+                    <td>{{ timeSlot.thursday }}</td>
+                    <td>{{ timeSlot.friday }}</td>
+                </tr>
+            </table>
+        </main>
+    </div>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Timetable - Timetabling System</title>
+        <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.js"></script>
+        <style>
+            /* Your CSS styles here */
+        </style>
+    </head>
+    <body>
+        <div id="app">
+            <header>
+                <h1>Timetable</h1>
+            </header>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#schedule">View Schedule</a>
+                <a href="#courses">Manage Courses</a>
+                <a href="#rooms">Manage Rooms</a>
+            </nav>
+            <main>
+                <h2>Weekly Timetable</h2>
+                <table>
+                    <tr>
+                        <th>Time</th>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                    </tr>
+                    <tr v-for="timeSlot in timetable" :key="timeSlot.time">
+                        <td>{{ timeSlot.time }}</td>
+                        <td>{{ timeSlot.monday }}</td>
+                        <td>{{ timeSlot.tuesday }}</td>
+                        <td>{{ timeSlot.wednesday }}</td>
+                        <td>{{ timeSlot.thursday }}</td>
+                        <td>{{ timeSlot.friday }}</td>
+                    </tr>
+                </table>
+            </main>
+        </div>
+
+        <script>
+            const app = Vue.createApp({
+                data() {
+                    return {
+                        timetable: [
+                            { time: '8:00 AM - 9:30 AM', monday: '', tuesday: '', wednesday: 'CSCI101 - Room 101', thursday: '', friday: '' },
+                            // Add more timetable data here
+                        ]
+                    };
+                }
+            });
+
+            app.mount('#app');
+        </script>
+    </body>
+    </html>
+
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    timetable: [
+                        { time: '8:00 AM - 9:30 AM', monday: '', tuesday: '', wednesday: 'CSCI101 - Room 101', thursday: '', friday: '' },
+                        // Add more timetable data here
+                    ]
+                };
+            }
+        });
+
+        app.mount('#app');
+    </script>
+</body>
+</html>
